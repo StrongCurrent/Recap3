@@ -37,7 +37,9 @@ fetchCharacters();
 
 nextButton.addEventListener("click", async () => {
   cardContainer.innerHTML = "";
-  page++;
+  if (page != 42) {
+    page++;
+  }
   fetchCharacters();
   pagination.innerHTML = `${page}/${maxPage}`;
 });
